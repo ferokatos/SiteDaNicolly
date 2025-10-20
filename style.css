@@ -1,0 +1,165 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000000;
+    color: #fff;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #d30000be;
+    padding: 40px 20px;
+    color: rgb(255, 255, 255);
+    border-bottom: 5px solid #880000;
+    animation: fadeIn 1s forwards;
+}
+
+header h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    animation: heartbeat 1.5s infinite;
+}
+
+header p {
+    font-size: 20px;
+}
+
+/* Mensagem principal */
+.mensagem-principal {
+    padding: 50px 20px;
+    background-color: lab(10.77% 0 0);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.3s;
+}
+
+.mensagem-principal h2 {
+    font-size: 36px;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+.mensagem-principal p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: white;
+}
+
+.foto-principal img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ff0000;
+    transform: translateX(-50px);
+    opacity: 0;
+    animation: slideIn 1s forwards;
+    animation-delay: 0.5s;
+}
+
+/* Lembranças */
+.lembrancas {
+    padding: 50px 20px;
+    background-color: lab(10.77% 0 0);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.6s;
+}
+
+.lembrancas h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #ff0000;
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.galeria .item img,
+.galeria .item video {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid #ff0000;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria .item img:hover,
+.galeria .item video:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.5);
+}
+
+/* Mensagem final */
+.mensagem-final {
+    padding: 50px 20px;
+    background-color: lab(10.77% 0 0);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.8s;
+}
+
+.mensagem-final h2 {
+    font-size: 36px;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+.mensagem-final p {
+    font-size: 15.7px;
+    max-width: 700px;
+    margin: 0 auto;
+    color:white;
+    text-align: center;
+}
+
+/* Rodapé */
+footer {
+    background-color: lab(10.77% 0 0);
+    padding: 30px 20px;
+    color: white;
+    border-top: 5px solid #ff0000;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+    animation-delay: 1s;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.05); }
+    50% { transform: scale(1.1); }
+    75% { transform: scale(1.05); }
+}
